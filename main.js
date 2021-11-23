@@ -20,5 +20,11 @@ const app = Vue.createApp({
         updateImage(variantImage) {
             this.image = variantImage
         }
+    },
+    // boosts performance
+    computed: {
+        title() {
+            return this.brand + ' ' + this.product;
+        }
     }
 })
